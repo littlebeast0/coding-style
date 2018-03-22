@@ -24,11 +24,11 @@ if(val)  {
 这种写法编译器是可以正常识别，但是指针、整型、bool值、字符串、浮点数严格意义上来说是不同的类型。if(val)的写法会隐藏掉val本身的类型信息，这对我们阅读代码时眼睛parse代码时很不利的。
 
 ### 2.1.2 正确的写法
-指针：if(val != NULL) 或者 if(val == NULL)
-整型：if(val != 0)
-bool值：if( val == true) if(val == false)
-字符串：if(val != "" )
-浮点值：if( abs(val) < MIN_PRECISION )
+指针：if(val != NULL) 或者 if(val == NULL)  
+整型：if(val != 0) 或者 if(val == 10)  
+bool值：if( val == true) 或者 if(val == false)  
+字符串：if(val != "" ) 或者 if(val == "")  
+浮点值：if( abs(val) < MIN_PRECISION )  
 
 ## 2.2 避免多层if的深度嵌套
 ### 2.2.1 两种写法
